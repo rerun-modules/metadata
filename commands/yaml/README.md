@@ -1,11 +1,11 @@
-*rerun-metadata:yaml*: Generate metadata in the yaml format.
+*metadata:yaml*: Generate metadata in the yaml format.
 
 Example
 -------
 
 Generate yaml for the "waitfor" module:
 
-    rerun rerun-metadata:yaml waitfor > /tmp/waitfor.yaml
+    rerun metadata:yaml waitfor > /tmp/waitfor.yaml
     
 The produced yaml:
 
