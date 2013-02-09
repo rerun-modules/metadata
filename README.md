@@ -7,4 +7,4 @@ Current formats:
 
 * yaml
 
-General syntax: `rerun:rerun-metadata <format> <module> <module> ... <module.
+General syntax: `rerun:rerun-metadata <format> <module> <module> ... <module>`
