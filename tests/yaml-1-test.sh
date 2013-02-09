@@ -1,6 +1,6 @@
 #!/usr/bin/env roundup
 #
-#/ usage:  rerun stubbs:test -m rerun-metadata -p yaml [--answers <>]
+#/ usage:  rerun stubbs:test -m metadata -p yaml [--answers <>]
 #
 
 # Helpers
@@ -15,7 +15,7 @@ describe "yaml"
 # Generate metadata into yaml and validate output.
 it_generates_yaml_for_module() {
     OUT=$(mktemp /tmp/stubbs.yaml.XXXX)
-    rerun rerun-metadata:yaml stubbs > $OUT
+    rerun metadata:yaml stubbs > $OUT
  
    # If python and PyYAML are available, parse the file and print some metadata.
     if command -v python && python -c 'import yaml; ' 
