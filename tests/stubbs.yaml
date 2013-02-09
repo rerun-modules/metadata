@@ -1,0 +1,293 @@
+stubbs:
+  description: "Simple rerun module builder"
+  version: 1.0.2
+  requires: 
+  externals: rpm-build
+  commands:
+    add-command:
+      description: "add command to module"
+      options:
+        command:
+          description: "the command name"
+          arguments: true
+          required: true
+          default: 
+          short: c
+          long: command
+          range: 
+        description:
+          description: "the brief description"
+          arguments: true
+          required: true
+          default: 
+          short: 
+          range: 
+        module:
+          description: "the module name"
+          arguments: true
+          required: true
+          short: m
+          long: module
+          default: 
+          export: false
+        overwrite:
+          description: "should overwrite?"
+          arguments: true
+          required: false
+          default: false
+          short: 
+          range: "{true,false}"
+    add-module:
+      description: "add a new module"
+      options:
+        description:
+          description: "the brief description"
+          arguments: true
+          required: true
+          default: 
+          short: 
+          range: 
+        module:
+          description: "the module name"
+          arguments: true
+          required: true
+          short: m
+          long: module
+          default: 
+          export: false
+        template:
+          description: "the template name or path"
+          arguments: true
+          required: 
+          short: 
+          long: template
+          default: 
+          export: false
+    add-option:
+      description: "add a command option"
+      options:
+        arg:
+          description: "option takes argument?"
+          arguments: true
+          required: false
+          default: false
+          short: 
+          range: {true,false}
+        command:
+          description: "the command name"
+          arguments: true
+          required: true
+          default: 
+          short: c
+          long: command
+          range: 
+        default:
+          description: "default value"
+          arguments: true
+          required: false
+          default: 
+          short: d
+          range: 
+        description:
+          description: "the brief description"
+          arguments: true
+          required: true
+          default: 
+          short: 
+          range: 
+        export:
+          description: "export variable?"
+          arguments: true
+          required: false
+          default: false
+          short: 
+          range: {true,false}
+        long:
+          description: "long option name"
+          arguments: true
+          required: false
+          default: 
+          short: 
+          range: 
+        module:
+          description: "the module name"
+          arguments: true
+          required: true
+          short: m
+          long: module
+          default: 
+          export: false
+        option:
+          description: "the option name"
+          arguments: true
+          required: true
+          default: 
+          short: o
+          long: option
+          range: 
+        range:
+          description: "argument value range"
+          arguments: true
+          required: false
+          default: 
+          short: 
+          range: 
+        required:
+          description: "option required?"
+          arguments: true
+          required: false
+          default: false
+          short: 
+          range: {true,false}
+        short:
+          description: "short option name"
+          arguments: true
+          required: false
+          default: 
+          short: 
+          range: 
+    archive:
+      description: "build an archive of rerun and modules"
+      options:
+        file:
+          description: "file name"
+          arguments: true
+          required: false
+          default: 
+          short: f
+          range: 
+        format:
+          description: "output format"
+          arguments: true
+          required: false
+          short: f
+          long: format
+          default: bin
+          export: false
+          range: {bin,rpm}
+        modules:
+          description: "modules glob pattern"
+          arguments: true
+          required: true
+          default: "'*'"
+          short: 
+          long: modules
+          range: 
+        release:
+          description: "the archive release number"
+          arguments: true
+          required: false
+          short: 
+          long: release
+          default: 1
+          export: false
+        version:
+          description: "the archive version number"
+          arguments: true
+          required: false
+          short: 
+          long: version
+          default: 1.0.0
+          export: false
+    docs:
+      description: "generate the docs"
+      options:
+        dir:
+          description: "the directory path"
+          arguments: true
+          required: false
+          default: 
+          short: 
+          range: 
+        module:
+          description: "the module name"
+          arguments: true
+          required: true
+          short: m
+          long: module
+          default: 
+          export: false
+    edit:
+      description: "edit a command script"
+      options:
+        command:
+          description: "the command name"
+          arguments: true
+          required: true
+          default: 
+          short: c
+          long: command
+          range: 
+        module:
+          description: "the module name"
+          arguments: true
+          required: true
+          short: m
+          long: module
+          default: 
+          export: false
+    migrate:
+      description: "Migrate 0.9 modules to the 1.0 module format"
+      options:
+        module:
+          description: "the module name"
+          arguments: true
+          required: true
+          short: m
+          long: module
+          default: 
+          export: false
+    rm-option:
+      description: "remove a command option"
+      options:
+        command:
+          description: "the command name"
+          arguments: true
+          required: true
+          default: 
+          short: c
+          long: command
+          range: 
+        module:
+          description: "the module name"
+          arguments: true
+          required: true
+          short: m
+          long: module
+          default: 
+          export: false
+        option:
+          description: "the option name"
+          arguments: true
+          required: true
+          default: 
+          short: o
+          long: option
+          range: 
+    test:
+      description: "run module test scripts"
+      options:
+        answers:
+          description: "option answer file"
+          arguments: true
+          required: false
+          default: 
+          short: 
+          export: true
+          range: 
+        module:
+          description: "the module name"
+          arguments: true
+          required: true
+          short: m
+          long: module
+          default: 
+          export: false
+        plan:
+          description: "the test plan"
+          arguments: true
+          required: false
+          default: 
+          short: p
+          long: plan
+          range: 
